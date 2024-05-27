@@ -6,10 +6,10 @@
              xmlns:local="clr-namespace:WpfTV.Pages"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Center">
-        <local:Element/>
-        <local:Element/>
-        <local:Element/>
-        <local:Element/>
+    <StackPanel Margin="0,40" Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Center">
+        <local:Element Title="Network Setting" Kind="Wifi"/>
+        <local:Element Title="Time Settin" Kind="Timelapse"/>
+        <local:Element Title="Common" Kind="Layers"/>
+        <local:Element Title="About Us" Kind="Information"/>
     </StackPanel>
 </UserControl>

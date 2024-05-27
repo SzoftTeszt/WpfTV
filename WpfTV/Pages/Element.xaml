@@ -5,9 +5,10 @@
              xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WpfTV.Pages"
+             Name="element"
              mc:Ignorable="d" 
              >
-    <Button Width="250">
+    <Button Width="230" Padding="20" Margin="15,0">
         <Button.Style>
             <Style TargetType="Button">
                 <Setter Property="Background">
@@ -35,8 +36,8 @@
             </Style>
         </Button.Style>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Icon:PackIconMaterial Kind="Wifi" HorizontalAlignment="Center" Height="50" Width="50" />
-            <TextBlock Margin="0,30,0,0"  FontSize="20" Text="Network Settings"/>
+            <Icon:PackIconMaterial Kind="{Binding Kind}" HorizontalAlignment="Center" Height="50" Width="50" />
+            <TextBlock Margin="0,30,0,0"  FontSize="20" Text="{Binding Title}"/>
         </StackPanel>
 
     </Button>

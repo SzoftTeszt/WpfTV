@@ -20,9 +20,36 @@ namespace WpfTV.Pages
     /// </summary>
     public partial class Element : UserControl
     {
+       
+
+        public static DependencyProperty TitleProperty =
+            DependencyProperty.Register("Title", typeof(string), typeof(Element));
+
+        public string Title { get {
+                return (string)GetValue(TitleProperty);
+            }
+            set {
+                SetValue(TitleProperty, value); }
+        
+        } 
+        
+        public static DependencyProperty KindProperty =
+            DependencyProperty.Register("Kind", typeof(string), typeof(Element));
+
+        public string Kind { get {
+                return (string)GetValue(KindProperty);
+            }
+            set {
+                SetValue(KindProperty, value); }
+        
+        }
         public Element()
         {
+           
             InitializeComponent();
+            //this.Kind = "Wifi";
+            //this.Title = "Network Settings";
+            this.DataContext = this;
         }
     }
 }
