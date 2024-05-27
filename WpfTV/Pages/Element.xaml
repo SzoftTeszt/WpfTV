@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="WpfTV.Pages.Element"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfTV.Pages"
+             mc:Ignorable="d" 
+             >
+    <Button Width="250">
+        <Button.Style>
+            <Style TargetType="Button">
+                <Setter Property="Background">
+                    <Setter.Value>
+                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop Color="#464f78"/>
+                    <GradientStop Color="#323f6c" Offset="0.9"/>
+                </LinearGradientBrush>
+                    </Setter.Value>
+            </Setter>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}">
+                                <ContentPresenter 
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Center">
+                                    
+                                </ContentPresenter>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            
+            </Style>
+        </Button.Style>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Icon:PackIconMaterial Kind="Wifi" HorizontalAlignment="Center" Height="50" Width="50" />
+            <TextBlock Margin="0,30,0,0"  FontSize="20" Text="Network Settings"/>
+        </StackPanel>
+
+    </Button>
+</UserControl>
