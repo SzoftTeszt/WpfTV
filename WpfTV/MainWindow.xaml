@@ -41,9 +41,9 @@
                 <TextBlock FontSize="24" Text="Settings" Foreground="#f8fefa"></TextBlock>
             </StackPanel>
         
-            <ContentPresenter Grid.Row="2">
+            <ContentPresenter Grid.Row="2" Margin="40,0">
                 <ContentPresenter.Content>
-                    <Pages:Settings_Page></Pages:Settings_Page>
+                    <Pages:Storage_Page/>
                 </ContentPresenter.Content>
             </ContentPresenter>
     </Grid>

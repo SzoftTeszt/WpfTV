@@ -8,11 +8,12 @@
              Name="element"
              mc:Ignorable="d" 
              >
-    <Button Width="230" Padding="20" Margin="15,0">
+    <Button Width="230" Padding="20" Margin="15,10">
         <Button.Style>
             <Style TargetType="Button">
                 <Setter Property="Background">
                     <Setter.Value>
+                     
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Color="#464f78"/>
                     <GradientStop Color="#323f6c" Offset="0.9"/>
@@ -22,7 +23,7 @@
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="Button">
-                            <Border Background="{TemplateBinding Background}">
+                            <Border Background="{TemplateBinding Background}" CornerRadius="5">
                                 <ContentPresenter 
                                     VerticalAlignment="Center"
                                     HorizontalAlignment="Center">
@@ -32,6 +33,14 @@
                         </ControlTemplate>
                     </Setter.Value>
                 </Setter>
+
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="#5f76f6"/>
+                        <Setter Property="Foreground" Value="#ffffff"/>
+                        <Setter Property="Margin" Value="15,0"/>
+                    </Trigger>
+                </Style.Triggers>
             
             </Style>
         </Button.Style>

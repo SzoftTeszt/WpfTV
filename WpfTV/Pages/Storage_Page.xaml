@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="WpfTV.Pages.Storage_Page"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfTV.Pages"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             mc:Ignorable="d" 
+             
+            >
+    <Border VerticalAlignment="Center" MinHeight="400" 
+            Padding="20,30"
+            Margin="50">
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                <GradientStop Color="#464f78"/>
+                <GradientStop Color="#323f6c" Offset="0.9"/>
+            </LinearGradientBrush>
+        </Border.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <TextBlock Text="Toltal Size : 9.6 GB" FontSize="22" Foreground="White"/>
+            <lvc:PieChart Height="250" InnerRadius="150" >
+                <lvc:PieChart.Series >
+                    <lvc:PieSeries Title="alma" Values="800" Fill="Green" StrokeThickness="0"/>
+                    <lvc:PieSeries Values="400" Fill="Red" StrokeThickness="0"/>
+                    <lvc:PieSeries Values="1200" Fill="Blue" StrokeThickness="0"/>
+                    <lvc:PieSeries Values="70" Fill="Purple" StrokeThickness="0"/>
+                    <lvc:PieSeries Values="150" Fill="Orange" StrokeThickness="0"/>
+                </lvc:PieChart.Series>
+            </lvc:PieChart>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <local:StorageTitle_Page Title="System: 800 MB" Color="Green"/>
+            <local:StorageTitle_Page Title="Photo: 400 MB" Color="Red"/>
+            <local:StorageTitle_Page Title="Music: 1200 MB" Color="Blue"/>
+            <local:StorageTitle_Page Title="Application: 70 MB" Color="Purple"/>
+            <local:StorageTitle_Page Title="Video: 150 MB" Color="Orange"/>
+
+        </StackPanel>
+    </Grid>
+    </Border>
+</UserControl>
